@@ -20,7 +20,13 @@ $(document).ready(function() {
     "<%= whatToSay %>" +
   "</h1>";
 
-  $('body').html(
+  var htmlTemplate = $('#template-1').text();
+
+  $('body').append(
     _.template(myCustomTemplate, {whatToSay: "hello world!"})
   );
+
+  $('body').append(
+    _.template(htmlTemplate, {anotherThingToSay: "goodbye world!"})
+  )
 });
