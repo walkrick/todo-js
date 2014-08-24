@@ -122,3 +122,17 @@ And I've completed the todo
 When I click the 'undo' next to the todo
 Then the todo is back in the "Todo" section
 ```
+
+### Persist all actions
+```
+As a user
+Given I've done a lot of things
+When I refresh the page
+Then the state of my todo list is persisted
+```
+
+## Hints
+
+* [EJS gem](https://rubygems.org/gems/ejs)
+* [Rendering JSON](http://guides.rubyonrails.org/layouts_and_rendering.html#rendering-json)
+* [Capybara JavaScript Tests](https://github.com/jnicklas/capybara#drivers)
