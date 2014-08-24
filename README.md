@@ -19,21 +19,60 @@ When I navigate to the homepage
 Then I see a place type a todo
 ```
 
+<img src="mockups/homepage.png">
+
 ### Create todo (no persistence)
 ```
 As a user
 When I type in a todo
-And hit enter
+And I click "Create Todo"
 Then I see that todo below the input
 ```
 
-### Remove todo (no persistence)
+<img src="mockups/create.png">
+
+### Create todo flash
+```
+As a user
+When I type in a todo
+And I click "Create Todo"
+Then I see a flash message telling me it's created
+And it fades out after 5 seconds
+```
+
+<img src="mockups/create-flash.png">
+
+### Dismiss create todo flash
+```
+As a user
+Given I have a create todo flash
+When I click on the 'x'
+Then the flash message is removed
+```
+
+<img src="mockups/create-flash-dismiss.png">
+
+### Delete todo (no persistence)
 ```
 As a user
 Given I've created a todo
 When I click on the 'x' next to the todo
-Then the todo is removed
+Then the todo is deleted
 ```
+
+<img src="mockups/delete.png">
+
+### Delete todo flash
+```
+As a user
+When I type in a todo
+And I click "x"
+Then I see a flash message telling me it's deleted
+And it fades out after 5 seconds
+And it's dismissable
+```
+
+<img src="mockups/delete-flash.png">
 
 ### Complete todo (no persistence)
 ```
@@ -43,6 +82,20 @@ When I click on '✓'
 Then the todo is removed from the initial list
 And I see it in the 'Completed' section
 ```
+
+<img src="mockups/complete.png">
+
+### Complete todo flash
+```
+As a user
+When I type in a todo
+And I click '✓'
+Then I see a flash message telling me it's created
+And it fades out after 5 seconds
+And it's dismissible
+```
+
+<img src="mockups/complete-flash.png">
 
 ### Delete completed todo (no persistence)
 ```

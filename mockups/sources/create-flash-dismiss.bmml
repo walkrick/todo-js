@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="992" measuredH="718" mockupW="943" mockupH="665">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="49" y="53" w="943" h="665" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todoly%0Ahttp%3A//todo.ly</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="462" y="149" w="-1" h="-1" measuredW="116" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todoly</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="389" y="207" w="262" h="-1" measuredW="79" measuredH="23" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="389" y="245" w="262" h="24" measuredW="94" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Create%20Todo</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::HRule" x="64" y="303" w="913" h="-1" measuredW="100" measuredH="10" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Title" x="487" y="328" w="-1" h="-1" measuredW="67" measuredH="31" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Todo%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::List" x="374" y="392" w="292" h="63" measuredW="100" measuredH="126" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>15658734</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>false</hasHeader>
+        <text>Item%20One%0AItem%20Two%0AItem%20Three</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="374" y="359" w="292" h="24" measuredW="99" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6989903</color>
+        <text>Todo%20created</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="651" y="361" w="10" h="-1" measuredW="10" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <text>%u2717</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
