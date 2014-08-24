@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require underscore
 //= require_tree .
+
+$(document).ready(function() {
+  var myCustomTemplate = "<h1>" +
+    "<%= whatToSay %>" +
+  "</h1>";
+
+  $('body').html(
+    _.template(myCustomTemplate, {whatToSay: "hello world!"})
+  );
+});
