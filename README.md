@@ -113,3 +113,12 @@ Given I have only one completed todo
 When I delete that todo
 Then I no longer see the 'Completed' section
 ```
+
+### Move completed todo back into todos
+```
+As a user
+Given I've created a todo
+And I've completed the todo
+When I click the 'undo' next to the todo
+Then the todo is back in the "Todo" section
+```
