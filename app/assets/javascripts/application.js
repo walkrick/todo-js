@@ -23,10 +23,10 @@ $(document).ready(function() {
   var htmlTemplate = $('#template-1').text();
 
   $('body').append(
-    _.template(myCustomTemplate, {whatToSay: "hello world!"})
+    _.template(myCustomTemplate, {whatToSay: "hello world, I'm from only javascript!"})
   );
 
   $('body').append(
-    _.template(htmlTemplate, {anotherThingToSay: "goodbye world!"})
+    _.template(htmlTemplate, {anotherThingToSay: "hello world, I'm from both javascript and HTML!"})
   )
 });
