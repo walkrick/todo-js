@@ -16,7 +16,10 @@ RSpec.configure do |config|
 
   config.use_transactional_fixtures = false
 
-  DatabaseCleaner.clean_with :truncation
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.strategy = :truncation
+  end
 
   config.before do
     DatabaseCleaner.start
