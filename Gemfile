@@ -9,6 +9,13 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
 
+group :development, :test do
+  gem "rspec-rails"
+  gem "capybara"
+  gem "database_cleaner"
+  gem "selenium-webdriver"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
