@@ -6,6 +6,5 @@ describe "viewing the homepage" do
 
     expect(page).to have_content("Hello, I'm a normal rails view")
     expect(page).to have_content("hello world, I'm from only javascript!")
-    expect(page).to have_content("hello world, I'm from both javascript and HTML!")
   end
 end

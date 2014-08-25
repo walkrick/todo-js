@@ -12,21 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require underscore
 //= require_tree .
 
 $(document).ready(function() {
-  var myCustomTemplate = "<h1>" +
-    "<%= whatToSay %>" +
-  "</h1>";
-
-  var htmlTemplate = $('#template-1').text();
-
-  $('body').append(
-    _.template(myCustomTemplate, {whatToSay: "hello world, I'm from only javascript!"})
-  );
-
-  $('body').append(
-    _.template(htmlTemplate, {anotherThingToSay: "hello world, I'm from both javascript and HTML!"})
-  )
+  $('body').append("<h1>hello world, I'm from only javascript!</h1>");
 });
