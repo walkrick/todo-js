@@ -133,7 +133,5 @@ Then the state of my todo list is persisted
 
 ## Hints
 
-* [EJS gem](https://rubygems.org/gems/ejs)
 * [Rendering JSON](http://guides.rubyonrails.org/layouts_and_rendering.html#rendering-json)
 * [Capybara JavaScript Tests](https://github.com/jnicklas/capybara#drivers)
-* [Changing underscore template delimiters](http://stackoverflow.com/questions/7514922/rails-with-underscore-js-templates)
