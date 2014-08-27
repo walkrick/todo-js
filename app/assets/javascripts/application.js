@@ -1,19 +1,89 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
 //
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function() {
-  $('body').append("<h1>hello world, I'm from only javascript!</h1>");
+$(document).ready(function () {
+
+  $('body').append('<h1>Todo</h1>');
+
+  $('body').append('<form><input type="text" id="item" />');
+
+  $('body').append('<button class="create">Create Todo</button>');
+
+  $('button').one('click', function () {
+    $('body').append('<h2 id="head"> Todos!</h2>');
+  });
+
+
+  $('button').click(function (e) {
+    e.preventDefault();
+    var item = $('#item').val();
+    $('body').append('<ul>' + item + "  " + '<a href="">X</a></ul>');
+    $("ul").on('click', function (e) {
+      e.preventDefault();
+      $(this).remove();
+
+    });
+  });
+  (function ($) {
+    $.fn.flash_message = function (options) {
+      options = $.extend({
+        text: 'Done',
+        time: 5000,
+        how: 'before',
+        class_name: ''
+      }, options);
+      return $(this).each(function () {
+        if ($(this).parent().find('.flash_message').get(0))
+          return;
+        var message = $('<div/>', {
+          'class': 'flash_message ' + options.class_name,
+          text: options.text
+        }).hide().fadeIn('fast');
+        $(this)[options.how](message);
+        message.delay(options.time).fadeOut('normal', function () {
+          $(this).remove();
+        });
+      });
+    };
+  })(jQuery);
+  $('.create').click(function () {
+    $('body').flash_message({
+      text: 'Todo Created' + '           X',
+      how: 'append'
+    });
+    $('.flash_message').insertAfter('#head');
+    $(".flash_message").on('click', function (e) {
+      e.preventDefault();
+      $(this).remove();
+    });
+  });
+
+  var $items = $('#items');
+
+  $.ajax({
+    type: 'GET',
+    url: '/api/items',
+    success: function (items) {
+      $.each(items, function (i, item) {
+        $items.append('<ul>todo: ' + item.todo + '</ul>');
+      });
+    }
+  });
+//  $('add-item').on('click', function () {
+//    var item = {
+//      todo: todo.val();
+//  };
+//
+//  $.ajax({
+//    type: 'POST',
+//    url: '/api/orders',
+//    data: item,
+//    success: function (newItem) {
+//    }
+//  });
+//
+//});
 });
+
